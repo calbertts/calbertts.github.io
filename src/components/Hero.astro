@@ -1,0 +1,72 @@
+<section id="hero" class="relative flex min-h-screen items-center overflow-hidden pt-24">
+  <div class="pointer-events-none absolute inset-0 -z-10">
+    <div class="hero-orb absolute -left-24 top-0 h-[28rem] w-[28rem] rounded-full blur-3xl md:h-[36rem] md:w-[36rem]"></div>
+    <div class="hero-orb-secondary absolute bottom-0 right-[-8rem] h-[22rem] w-[22rem] rounded-full blur-3xl md:h-[30rem] md:w-[30rem]"></div>
+  </div>
+
+  <div class="mx-auto grid max-w-6xl items-center gap-12 px-6 py-20 md:grid-cols-5">
+    <div class="animate-on-scroll stagger-2 order-2 md:order-1 md:col-span-3">
+      <p class="mb-4 text-sm font-semibold uppercase tracking-[0.35em] text-accent">Hello, I&apos;m</p>
+      <h1 class="text-5xl leading-tight text-text-primary md:text-7xl">Carlos Alberto</h1>
+      <p class="mt-6 text-xl text-text-secondary md:text-2xl">
+        Senior Software Engineer &amp; AI Innovation Champion
+      </p>
+      <p class="mt-6 max-w-2xl text-base leading-8 text-text-secondary md:text-lg">
+        Building intelligent systems where natural language becomes the interface to enterprise
+        operations.
+      </p>
+
+      <div class="mt-10 flex flex-col gap-4 sm:flex-row">
+        <a
+          href="#projects"
+          class="inline-flex items-center justify-center rounded-full bg-accent px-7 py-3 text-sm font-semibold text-bg-dark transition duration-300 hover:bg-highlight hover:shadow-[0_0_30px_rgba(212,148,58,0.35)]"
+        >
+          View My Work
+        </a>
+        <a
+          href="#contact"
+          class="inline-flex items-center justify-center rounded-full border border-accent px-7 py-3 text-sm font-semibold text-accent transition duration-300 hover:bg-accent hover:text-bg-dark"
+        >
+          Get In Touch
+        </a>
+      </div>
+    </div>
+
+    <div class="animate-on-scroll stagger-1 order-1 flex justify-center md:order-2 md:col-span-2">
+      <div class="relative">
+        <div class="absolute inset-6 rounded-full bg-accent/20 blur-3xl"></div>
+        <div class="relative rounded-full bg-gradient-to-br from-accent via-highlight to-accent-copper p-1.5 shadow-[0_0_60px_rgba(212,148,58,0.22)]">
+          <img
+            src="/me.png"
+            alt="Portrait of Carlos Alberto"
+            class="h-72 w-72 rounded-full object-cover object-center md:h-96 md:w-96"
+            loading="eager"
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .hero-orb {
+    background: radial-gradient(circle, rgba(212, 148, 58, 0.22) 0%, rgba(196, 120, 50, 0.16) 35%, rgba(15, 17, 23, 0) 72%);
+    animation: hero-drift 14s ease-in-out infinite;
+  }
+
+  .hero-orb-secondary {
+    background: radial-gradient(circle, rgba(240, 198, 116, 0.16) 0%, rgba(212, 148, 58, 0.12) 36%, rgba(15, 17, 23, 0) 72%);
+    animation: hero-drift 18s ease-in-out infinite reverse;
+  }
+
+  @keyframes hero-drift {
+    0%,
+    100% {
+      transform: translate3d(0, 0, 0) scale(1);
+    }
+
+    50% {
+      transform: translate3d(2rem, -1.5rem, 0) scale(1.08);
+    }
+  }
+</style>

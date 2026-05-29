@@ -1,0 +1,51 @@
+---
+const stats = [
+  { value: '12+', label: 'Years of Experience' },
+  { value: '7', label: 'Companies' },
+  { value: '3', label: 'Countries' },
+  { value: '1', label: 'Founded Company' },
+];
+---
+
+<section id="about">
+  <div class="mx-auto max-w-6xl px-6 py-20">
+    <div class="animate-on-scroll stagger-1 mb-12">
+      <p class="text-sm font-semibold uppercase tracking-[0.35em] text-accent">About</p>
+      <h2 class="mt-3 text-4xl text-text-primary md:text-5xl">About Me</h2>
+      <div class="mt-4 h-1 w-24 rounded-full bg-gradient-to-r from-accent to-highlight"></div>
+    </div>
+
+    <div class="grid gap-10 md:grid-cols-2 md:items-center">
+      <div class="animate-on-scroll stagger-2 space-y-6 text-lg leading-8 text-text-secondary">
+        <p>
+          I&apos;m a senior software engineer with more than 12 years of experience designing,
+          delivering, and scaling complex digital platforms across banking, enterprise software,
+          and product-led environments.
+        </p>
+        <p>
+          My career has blended hands-on engineering with technical leadership, helping teams turn
+          ambitious ideas into resilient systems while raising the bar for quality, collaboration,
+          and execution.
+        </p>
+        <p>
+          Today, I focus on AI-driven innovation: creating tools and workflows that make software
+          development more intelligent, more intuitive, and far more impactful for global
+          organizations.
+        </p>
+      </div>
+
+      <div class="grid gap-4 sm:grid-cols-2">
+        {
+          stats.map((stat, index) => (
+            <div
+              class={`animate-on-scroll stagger-${(index % 4) + 2} rounded-2xl border border-border bg-bg-card p-6 transition duration-300 hover:-translate-y-1 hover:scale-[1.02] hover:border-accent/50`}
+            >
+              <p class="text-4xl font-semibold text-highlight">{stat.value}</p>
+              <p class="mt-3 text-sm uppercase tracking-[0.2em] text-text-secondary">{stat.label}</p>
+            </div>
+          ))
+        }
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,72 @@
+---
+import '../styles/global.css';
+
+interface Props {
+  title?: string;
+  description?: string;
+  image?: string;
+}
+
+const {
+  title = 'Carlos Alberto — Senior Software Engineer & AI Innovation Champion',
+  description = 'Senior Software Engineer and AI Innovation Champion building natural-language-first enterprise systems, modern platforms, and high-impact digital products from Madrid.',
+  image = '/me.png',
+} = Astro.props;
+---
+
+<!doctype html>
+<html lang="en" class="bg-bg-dark">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <meta name="robots" content="index, follow" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content={image} />
+    <meta property="og:image:alt" content="Portrait of Carlos Alberto" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={image} />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Lora:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="bg-bg-dark text-text-primary antialiased selection:bg-accent/30 selection:text-text-primary">
+    <slot />
+
+    <script is:inline>
+      document.addEventListener('DOMContentLoaded', () => {
+        const animatedElements = document.querySelectorAll('.animate-on-scroll');
+
+        if (!('IntersectionObserver' in window)) {
+          animatedElements.forEach((element) => element.classList.add('visible'));
+          return;
+        }
+
+        const observer = new IntersectionObserver(
+          (entries, currentObserver) => {
+            entries.forEach((entry) => {
+              if (!entry.isIntersecting) return;
+              entry.target.classList.add('visible');
+              currentObserver.unobserve(entry.target);
+            });
+          },
+          {
+            threshold: 0.15,
+            rootMargin: '0px 0px -10% 0px',
+          },
+        );
+
+        animatedElements.forEach((element) => observer.observe(element));
+      });
+    </script>
+  </body>
+</html>

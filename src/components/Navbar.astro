@@ -1,0 +1,121 @@
+---
+const navLinks = [
+  { href: '#about', label: 'About' },
+  { href: '#experience', label: 'Experience' },
+  { href: '#skills', label: 'Skills' },
+  { href: '#projects', label: 'Projects' },
+  { href: '#articles', label: 'Articles' },
+  { href: '#contact', label: 'Contact' },
+];
+---
+
+<header
+  id="site-navbar"
+  class="fixed inset-x-0 top-0 z-50 border-b border-transparent bg-transparent transition-all duration-300"
+>
+  <nav class="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
+    <a href="#hero" class="text-2xl font-semibold tracking-[0.3em] text-accent transition-colors hover:text-highlight">
+      CA
+    </a>
+
+    <div class="hidden items-center gap-8 md:flex">
+      {
+        navLinks.map((link) => (
+          <a
+            href={link.href}
+            class="text-sm font-medium text-text-secondary transition-colors hover:text-text-primary"
+          >
+            {link.label}
+          </a>
+        ))
+      }
+    </div>
+
+    <button
+      id="nav-toggle"
+      type="button"
+      class="inline-flex h-11 w-11 items-center justify-center rounded-full border border-border bg-bg-card/80 text-text-primary transition hover:border-accent hover:text-accent md:hidden"
+      aria-expanded="false"
+      aria-label="Toggle navigation menu"
+    >
+      <span class="sr-only">Open navigation menu</span>
+      <span class="flex flex-col gap-1.5">
+        <span class="nav-bar h-0.5 w-5 rounded-full bg-current transition-all duration-300"></span>
+        <span class="nav-bar h-0.5 w-5 rounded-full bg-current transition-all duration-300"></span>
+        <span class="nav-bar h-0.5 w-5 rounded-full bg-current transition-all duration-300"></span>
+      </span>
+    </button>
+  </nav>
+
+  <div id="mobile-menu" class="mx-auto hidden max-w-6xl px-6 pb-4 md:hidden">
+    <div class="rounded-2xl border border-border bg-bg-card/95 p-4 shadow-lg shadow-black/20 backdrop-blur-xl">
+      <div class="flex flex-col gap-3">
+        {
+          navLinks.map((link) => (
+            <a
+              href={link.href}
+              class="rounded-xl px-4 py-3 text-sm font-medium text-text-secondary transition hover:bg-bg-dark hover:text-text-primary"
+            >
+              {link.label}
+            </a>
+          ))
+        }
+      </div>
+    </div>
+  </div>
+</header>
+
+<script is:inline>
+  document.addEventListener('DOMContentLoaded', () => {
+    const header = document.getElementById('site-navbar');
+    const toggle = document.getElementById('nav-toggle');
+    const menu = document.getElementById('mobile-menu');
+    const bars = toggle?.querySelectorAll('.nav-bar') ?? [];
+    const menuLinks = menu?.querySelectorAll('a') ?? [];
+
+    const updateHeader = () => {
+      if (!header) return;
+
+      if (window.scrollY > 24) {
+        header.classList.add(
+          'bg-bg-dark/90',
+          'backdrop-blur-xl',
+          'border-border/80',
+          'shadow-[0_12px_30px_rgba(0,0,0,0.25)]',
+        );
+      } else {
+        header.classList.remove(
+          'bg-bg-dark/90',
+          'backdrop-blur-xl',
+          'border-border/80',
+          'shadow-[0_12px_30px_rgba(0,0,0,0.25)]',
+        );
+      }
+    };
+
+    const closeMenu = () => {
+      if (!menu || !toggle) return;
+      menu.classList.add('hidden');
+      toggle.setAttribute('aria-expanded', 'false');
+      bars[0]?.classList.remove('translate-y-2', 'rotate-45');
+      bars[1]?.classList.remove('opacity-0');
+      bars[2]?.classList.remove('-translate-y-2', '-rotate-45');
+    };
+
+    toggle?.addEventListener('click', () => {
+      const isHidden = menu?.classList.contains('hidden');
+      menu?.classList.toggle('hidden');
+      toggle.setAttribute('aria-expanded', String(isHidden));
+
+      bars[0]?.classList.toggle('translate-y-2');
+      bars[0]?.classList.toggle('rotate-45');
+      bars[1]?.classList.toggle('opacity-0');
+      bars[2]?.classList.toggle('-translate-y-2');
+      bars[2]?.classList.toggle('-rotate-45');
+    });
+
+    menuLinks.forEach((link) => link.addEventListener('click', closeMenu));
+    window.addEventListener('scroll', updateHeader, { passive: true });
+    updateHeader();
+  });
+</script>
