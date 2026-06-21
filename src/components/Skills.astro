@@ -16,7 +16,7 @@ import { skillCategories } from '../data/skills';
           <article
             class={`animate-on-scroll stagger-${(index % 6) + 1} rounded-2xl border border-border bg-bg-card p-6 shadow-lg shadow-black/10 transition duration-300 hover:-translate-y-1 hover:border-accent/50`}
           >
-            <div class="text-4xl">{category.icon}</div>
+            <div class="h-10 w-10"><img src={category.icon} alt={category.title} class="h-full w-full object-contain" style="mix-blend-mode: screen;" /></div>
             <h3 class="mt-5 text-2xl font-semibold text-text-primary">{category.title}</h3>
             <div class="mt-6 flex flex-wrap gap-3">
               {category.skills?.map((skill) => <span class="rounded-full border border-border px-3 py-1.5 text-sm text-text-secondary transition hover:border-accent hover:text-text-primary">{skill}</span>)}

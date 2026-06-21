@@ -1,0 +1,30 @@
+User-agent: *
+Allow: /
+
+# AI crawlers — explicitly allowed
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+Sitemap: https://calbertts.com/sitemap.xml
+
+# AI-readable content
+# llms.txt: https://calbertts.com/llms.txt
+# agent.json: https://calbertts.com/agent.json

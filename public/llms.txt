@@ -1,0 +1,72 @@
+# Carlos Alberto — Senior Software Engineer & AI Innovation Leader
+
+> Personal website and professional portfolio of Carlos Alberto, a senior software engineer based in Madrid, Spain, specializing in AI-driven systems, cloud architecture, and technical leadership.
+
+## About
+
+Carlos Alberto is a Senior Software Engineer and Squad Lead with 12+ years of experience designing, delivering, and scaling complex digital platforms across banking, insurance, enterprise software, and product-led environments.
+
+He currently works at Nationale-Nederlanden (NN Group) in Madrid, leading a 6-person squad focused on replacing a legacy core banking system with cloud-native architecture. He is an active contributor to enterprise AI strategy and has participated in international AI hackathons.
+
+**Location:** Madrid, Spain  
+**Languages:** Spanish (native), English (professional)  
+**Contact:** Available via LinkedIn and GitHub (see /contact section)
+
+## Expertise
+
+- **AI & Machine Learning**: LLM fine-tuning (LoRA), Ollama, Gemma 4, MLX, MCP Servers, RAG, Prompt Engineering, OpenAI API
+- **Languages & Runtimes**: TypeScript, JavaScript, Python, Java, Bash, HTML/CSS
+- **Cloud & Infrastructure**: AWS Lambda, CloudFormation, S3, Azure DevOps, Docker, Kubernetes, Cloudflare
+- **Architecture & APIs**: Serverless Microservices, REST API Design, Event-Driven, Domain-Driven Design, WSO2 Gateway, GraphQL
+- **DevOps & Quality**: CI/CD Pipelines, SonarQube, Jest, Playwright, ESLint, GitHub Actions, Jenkins
+- **Leadership**: Squad Lead (6 people), Sprint Planning, Scrum (Certified), Code Reviews, Mentoring
+
+## Featured Projects
+
+### SIBA Semantic Shell
+A domain-specific language that replaces 90+ raw MCP tools with a single compact grammar for enterprise operations. Achieves 63% reduction in token usage and 3× faster execution. Uses fine-tuned Gemma 4 model with LoRA.
+- Tags: TypeScript, EBNF Grammar, MLX, Ollama, MCP
+
+### Quick Quote AI Agent
+Voice-first AI insurance quoting experience. Led a team at NN Hackathon 2026 at NN Group headquarters in the Netherlands.
+- Stack: Python, FastAPI, React, Azure OpenAI, Whisper
+
+### SIBA AI Agents Ecosystem
+Comprehensive AI agent ecosystem for GitHub Copilot CLI: 15+ skills, 9 specialized agents, custom MCP servers. Features multi-agent architecture with intelligent routing and custom MCP servers for AzDo, WSO2, SonarQube, and AWS.
+- Tags: TypeScript, MCP, AI Agents, Azure DevOps
+
+### tmux-pilot
+Background watcher and notification system for tmux. Monitors CI/CD pipelines, PRs, and quality gates with real-time alerts. Open source.
+- URL: https://github.com/calbertts/tmux-pilot
+- Tags: Bash, SQLite, tmux
+
+### The Codigo LLC
+Software development consultancy specializing in custom solutions, AI integration, and infrastructure automation. EIN-registered in Wyoming, USA.
+
+## Work History
+
+- **Nationale-Nederlanden (NN Group)** — Software Engineer & Squad Lead (Oct 2024 – Present, Madrid)
+- **Cognizant Technology Solutions** — Senior Software Developer & Team Manager (Mar 2021 – Sep 2024, Madrid)
+- **Aser Information Technologies** — Full-Stack Developer (Mar 2019 – Mar 2021, Madrid)
+- **Optiva Media (Telecom)** — Backend Developer (Mar 2018 – Mar 2019, Madrid)
+- **Klikin Deals** — Full-Stack Developer (Jul 2017 – Mar 2018, Madrid)
+- **System Group IT** — Full-Stack Developer & Tech Lead (Jul 2016 – Jul 2017, Colombia → Spain)
+- **Dreamcode** — Full-Stack Java Developer (May 2014 – Jul 2016, Cali, Colombia)
+- **IP Total Software** — Java Developer & Mobile Lead (Feb 2013 – May 2014, Cali, Colombia)
+
+## Technical Writing (Medium)
+
+- Unix Pipelines with cURL & Serverless
+- Writing Native Modules in C for QuickJS
+- Async Code for QuickJS Engine
+- Docker and Fuzzy Finder (fzf)
+- Electron Apps in macOS Using Docker
+
+Read all articles at: https://calbertts.medium.com
+
+## Links
+
+- Website: https://calbertts.com
+- GitHub: https://github.com/calbertts
+- Medium: https://calbertts.medium.com
+- Blog: https://blog.calbertts.com

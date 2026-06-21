@@ -8,10 +8,43 @@ interface Props {
 }
 
 const {
-  title = 'Carlos Alberto — Senior Software Engineer & AI Innovation Champion',
-  description = 'Senior Software Engineer and AI Innovation Champion building natural-language-first enterprise systems, modern platforms, and high-impact digital products from Madrid.',
+  title = 'Carlos Alberto — Senior Software Engineer & AI Innovation Leader',
+  description = 'Senior Software Engineer and AI Innovation Leader building natural-language-first enterprise systems, modern platforms, and high-impact digital products from Madrid.',
   image = '/me.png',
 } = Astro.props;
+
+const siteUrl = 'https://calbertts.com';
+const imageUrl = `${siteUrl}${image}`;
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Carlos Alberto",
+  "url": siteUrl,
+  "image": imageUrl,
+  "jobTitle": "Senior Software Engineer & Squad Lead",
+  "description": description,
+  "worksFor": {
+    "@type": "Organization",
+    "name": "Nationale-Nederlanden (NN Group)"
+  },
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Madrid",
+    "addressCountry": "ES"
+  },
+  "sameAs": [
+    "https://github.com/calbertts",
+    "https://calbertts.medium.com",
+    "https://blog.calbertts.com"
+  ],
+  "knowsAbout": [
+    "TypeScript", "JavaScript", "Python", "Java",
+    "AI Agents", "LLM Fine-tuning", "MCP Servers", "RAG",
+    "AWS", "Azure", "Docker", "Kubernetes", "Cloudflare",
+    "Serverless Architecture", "DevOps", "Technical Leadership"
+  ]
+};
 ---
 
 <!doctype html>
@@ -23,15 +56,42 @@ const {
     <title>{title}</title>
     <meta name="description" content={description} />
     <meta name="robots" content="index, follow" />
+    <meta name="author" content="Carlos Alberto" />
+    <meta name="keywords" content="Carlos Alberto, software engineer, AI, TypeScript, Python, MCP, LLM, cloud, Madrid, Spain, backend, full-stack, AI agents, DevOps" />
+
+    <!-- Canonical -->
+    <link rel="canonical" href={siteUrl} />
+
+    <!-- Open Graph -->
     <meta property="og:type" content="website" />
+    <meta property="og:url" content={siteUrl} />
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
-    <meta property="og:image" content={image} />
+    <meta property="og:image" content={imageUrl} />
     <meta property="og:image:alt" content="Portrait of Carlos Alberto" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:site_name" content="Carlos Alberto" />
+
+    <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content={title} />
     <meta name="twitter:description" content={description} />
-    <meta name="twitter:image" content={image} />
+    <meta name="twitter:image" content={imageUrl} />
+
+    <!-- AI discoverability -->
+    <link rel="alternate" type="text/plain" href="/llms.txt" title="LLMs.txt — AI-readable site description" />
+    <meta name="ai-content-declaration" content="human-authored" />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+
+    <!-- JSON-LD Structured Data -->
+    <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
+
+    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous" />
     <link

@@ -1,0 +1,24 @@
+{
+  "schema_version": "1.0",
+  "name_for_human": "Carlos Alberto — Portfolio",
+  "name_for_model": "calbertts_portfolio",
+  "description_for_human": "Personal portfolio and professional profile of Carlos Alberto, Senior Software Engineer and AI Innovation Leader based in Madrid, Spain.",
+  "description_for_model": "This is the personal website and professional portfolio of Carlos Alberto (calbertts), a Senior Software Engineer with 12+ years of experience specializing in AI systems, cloud architecture, TypeScript, Python, and technical leadership. Currently working at Nationale-Nederlanden (NN Group) in Madrid. Expertise includes LLM fine-tuning, MCP servers, AI agents, serverless architecture, and DevOps. Open to consulting opportunities via The Codigo LLC.",
+  "contact_email": "",
+  "legal_info_url": "https://calbertts.com",
+  "api": null,
+  "auth": {
+    "type": "none"
+  },
+  "human_readable_url": "https://calbertts.com",
+  "llms_txt_url": "https://calbertts.com/llms.txt",
+  "sitemap_url": "https://calbertts.com/sitemap.xml",
+  "owner": {
+    "name": "Carlos Alberto",
+    "github": "https://github.com/calbertts",
+    "medium": "https://calbertts.medium.com",
+    "blog": "https://blog.calbertts.com",
+    "location": "Madrid, Spain"
+  },
+  "topics": ["software engineering", "AI", "machine learning", "cloud", "TypeScript", "Python", "MCP", "LLM", "DevOps", "technical leadership"]
+}

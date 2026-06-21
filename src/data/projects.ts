@@ -4,7 +4,7 @@ export interface Project {
   highlights: string[];
   tags: string[];
   link?: string;
-  icon: string; // emoji
+  icon: string;
 }
 
 export const projects: Project[] = [
@@ -17,18 +17,18 @@ export const projects: Project[] = [
       "Fine-tuned Gemma 4 model with LoRA"
     ],
     tags: ["TypeScript", "EBNF Grammar", "MLX", "Ollama", "MCP"],
-    icon: "🧠"
+    icon: "/icons/icon-ai.png"
   },
   {
     title: "Quick Quote AI Agent",
-    description: "Voice-first AI insurance quoting experience. Led the winning team at NN Hackathon 2026.",
+    description: "Voice-first AI insurance quoting experience. Led a team at NN Hackathon 2026.",
     highlights: [
       "Voice → Whisper → GPT-4o → Instant Quote",
-      "Hackathon winner at NN HQ, Netherlands",
+      "Participated at NN HQ Hackathon, Netherlands",
       "Deployed on Azure Container Apps"
     ],
     tags: ["Python", "FastAPI", "React", "Azure OpenAI", "Whisper"],
-    icon: "🏆"
+    icon: "/icons/icon-trophy.png"
   },
   {
     title: "SIBA AI Agents Ecosystem",
@@ -39,7 +39,7 @@ export const projects: Project[] = [
       "Automated sprint planning and code reviews"
     ],
     tags: ["TypeScript", "MCP", "AI Agents", "Azure DevOps"],
-    icon: "🤖"
+    icon: "/icons/icon-robot.png"
   },
   {
     title: "tmux-pilot",
@@ -51,17 +51,7 @@ export const projects: Project[] = [
     ],
     tags: ["Bash", "SQLite", "tmux"],
     link: "https://github.com/calbertts/tmux-pilot",
-    icon: "📡"
+    icon: "/icons/icon-signal.png"
   },
-  {
-    title: "The Codigo LLC",
-    description: "Software development consultancy specializing in custom solutions, AI integration, and infrastructure automation.",
-    highlights: [
-      "EIN-registered in Wyoming, USA",
-      "Custom AI and infrastructure solutions",
-      "Cross-border tech consulting"
-    ],
-    tags: ["Entrepreneurship", "AI", "Consulting"],
-    icon: "🚀"
-  }
 ];
+
